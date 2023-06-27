@@ -74,3 +74,8 @@ echo "Using GPGPU-Sim in $GPGPUSIM_ROOT"
 #echo "If that is not the intended behavior, then run: \"unset GPGPUSIM_ROOT; unset GPGPUSIM_SETUP_ENVIRONMENT_WAS_RUN\"."
 echo "Accel-Sim setup succeeded."
 export ACCELSIM_SETUP_ENVIRONMENT_WAS_RUN=1
+
+echo "Checking pre-commit"
+if [ ! -z "$PS1"]; then
+    bash $ACCELSIM_ROOT/gpu-simulator/setup_precommit_hooks.sh;
+fi
