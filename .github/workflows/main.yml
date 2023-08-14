@@ -1,11 +1,8 @@
-name: print-a-message
+name: pre-commit
 run-name: ${{ github.actor }} is running a flow
 on: [push]
 jobs:
-  print-it:
+  my-job-name:
     runs-on: ubuntu-latest
     steps:
-      - run: cd ${GITHUB_WORKSPACE}
-      - run: pip3 install pre-commit
-      - run: pre-commit --version
-      - run: pre-commit run --all-files
+      - uses: pre-commit/action@v3.0.0
