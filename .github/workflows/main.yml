@@ -5,5 +5,5 @@ jobs:
   my-job-name:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v3
+      - uses: actions/checkout@v3
       - uses: pre-commit/action@v3.0.0
