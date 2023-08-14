@@ -5,7 +5,7 @@ jobs:
   print-it:
     runs-on: ubuntu-latest
     steps:
+      - run: cd ${GITHUB_WORKSPACE}
       - run: pip3 install pre-commit
       - run: pre-commit --version
       - run: pre-commit run --all-files
-      - run: echo "I'm running!"
