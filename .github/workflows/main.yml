@@ -1,0 +1,8 @@
+name: print-a-message
+run-name: ${{ github.actor }} is running a flow
+on: [push]
+jobs:
+  print-it:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "I'm running!"
