@@ -761,7 +761,7 @@ mlperf_training:
         - training_mlperf_ssd:
               - args:
                 accel-sim-mem: 90G
-        - training_mlperf_rnn:
+        - training_mlperf_rnn_translation:
               - args:
                 accel-sim-mem: 90G
 
@@ -775,3 +775,17 @@ mlperf_inference_no_external_datasets:
         - inference_mlperf_ssd:
             - args:
               accel-sim-mem: 60G
+
+mlperf_training_for_fangjia:
+    exec_dir: "$GPUAPPS_ROOT/bin/$CUDA_VERSION/release/"
+    data_dirs: ""
+    execs:
+    - object_detection_first:
+          - args:
+            accel-sim-mem: 20G
+    - object_detection_second:
+          - args:
+            accel-sim-mem: 20G
+    - image_segmentation: 
+          - args:
+            accel-sim-mem: 20G
