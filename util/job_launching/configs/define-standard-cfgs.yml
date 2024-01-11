@@ -146,6 +146,9 @@ GTO:
 SINGLEWARP:
     extra_params: "-gpgpu_scheduler exp_single_warp"
 
+TWOLEVEL:
+    extra_params: "-gpgpu_scheduler two_level_active:1:0:1"
+
 128B:
     extra_params: "-gpgpu_mem_addr_mapping dramid@7;00000000.00000000.00000000.00000000.0000RRRR.RRRRRRRR.RBBBCCCC.BCCSSSSS"
 
